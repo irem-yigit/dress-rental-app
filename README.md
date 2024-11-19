@@ -1,5 +1,5 @@
 
-# Dress Rental App - Spring Boot Edition
+# Dress Rental App 
 
 Dress Rental App, Java Spring Boot ile geliştirilmiş bir backend uygulamasıdır. Bu proje, web servisleri oluşturma, RESTful API geliştirme, Spring Boot ile veritabanı işlemleri ve hata yönetimi gibi konuları pratik etmek için hazırlanmıştır.
 
