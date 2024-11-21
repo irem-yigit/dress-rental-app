@@ -1,59 +1,72 @@
 
 # Dress Rental App 
 
-Dress Rental App, Java Spring Boot ile geliştirilmiş bir backend uygulamasıdır. Bu proje, web servisleri oluşturma, RESTful API geliştirme, Spring Boot ile veritabanı işlemleri ve hata yönetimi gibi konuları pratik etmek için hazırlanmıştır.
+Dress Rental App is a backend application developed with Java Spring Boot. This project is designed to practice topics such as creating web services, RESTful API development, database operations with Spring Boot and error management.
 
 
-## Özellikler
+## Features
 
-- **Spring Boot:** RESTful API geliştirmek için kullanılmıştır.
-- **Veritabanı Entegrasyonu:** Spring Data JPA kullanılarak CRUD işlemleri gösterilmiştir.
-- **Hata Yönetimi:** Uygulama genelinde etkili hata yönetimi ve istisna yakalama mekanizmaları uygulanmıştır.
-- **Transaction Yönetimi:** Veritabanı işlemlerinde transaction yönetimi sağlanmıştır.
+- **Spring Boot:** Used to develop RESTful API.
+- **Database Integration:** CRUD operations are demonstrated using Spring Data JPA.
+- **Error Management:** Effective error management and exception catching mechanisms are implemented throughout the application.
+- **Transaction Management:** Transaction management is provided for database transactions
 
-## Başlangıç
 
-### Gereksinimler
+## Technologies
 
-Projeyi çalıştırmak için sisteminizde aşağıdaki yazılımların kurulu olması gerekmektedir:
+- **Java 17:** Main programming language used for backend logic.
+- **Spring Boot:** Used for rapid development of RESTful services.
+- **Spring Data JPA:** A Spring module that simplifies database operations.
+- **Spring Security:** A Spring module that manages security, authentication and authorization processes.
+- **Maven:** Project dependency management and compilation operations.
+- **Docker & Docker Compose:** Used to run the application and MSSQL database as a container.
+- **MSSQL:** Used as a database management system.
+- **Junit - Mockito:** Used for application unit testing.
 
-- Java 17 veya üstü
-- Maven 3.8 veya üstü
-- Docker ve Docker Compose (opsiyonel)
-- IntelliJ IDEA veya başka bir IDE
-- MSSQL veya uyumlu başka bir SQL veritabanı
 
-### Kurulum
+## Getting Started
 
-1. **Projeyi klonlayın:**
+### Requirements
+
+To run the project, you must have the following software installed on your system:
+
+- Java 17 or later
+- Maven 3.8 or later
+- Docker and Docker Compose (optional)
+- IntelliJ IDEA or another IDE
+- MSSQL or another compatible SQL database
+- Swagger or Postman
+
+### Installation
+
+1. **Clone the project:**
 
    ```bash
-   git clone https://github.com/JavaBackendGelistirmeAkademisi/Hafta-6-DressRentalApp-Day2-SpringBoot.git
-   cd Hafta-6-DressRentalApp-Day2-SpringBoot
+   git clone https://github.com/irem-yigit/dress-rental-app.git
    ```
 
-2. **Veritabanını yapılandırın:**
+2. **Configure the database:**
 
-   - `dressrental` adında bir veritabanı oluşturun (Docker ile çalıştırılacaksa bu adım gerekmez).
-   - `src/main/resources` klasöründeki `application.properties` dosyasını veritabanı bilgilerinize göre güncelleyin.
+   - Create a database named `dressrental` (this step is not necessary if running with Docker).
+   - Update the `application.properties` file in the `src/main/resources` folder according to your database information.
 
-3. **Projeyi Maven ile derleyin:**
+3. **Build the project with Maven:**
 
    ```bash
    mvn clean install
    ```
 
-4. **Spring Boot uygulamasını çalıştırın:**
+4. **Run the Spring Boot application:**
 
    ```bash
    mvn spring-boot:run
    ```
 
-   Uygulama başlatıldıktan sonra API'leri kullanmaya başlayabilirsiniz.
+   Once the application is launched, you can start using the APIs.
 
-5. **Docker ile çalıştırma (opsiyonel):**
+5. **Running with Docker (optional):**
 
-   Uygulamayı Docker ile çalıştırmak için, projenin kök dizininde bulunan `docker-compose.yml` dosyasını kullanabilirsiniz:
+   To run the application with Docker, you can use the `docker-compose.yml` file located in the root directory of the project:
 
    ```bash
    docker-compose up --build
@@ -61,25 +74,16 @@ Projeyi çalıştırmak için sisteminizde aşağıdaki yazılımların kurulu o
 
 ## API Endpoints
 
-Dress Rental App uygulaması şu endpointleri sunar:
+Dress Rental App offers the following endpoints:
 
-- `GET /dresses`: Tüm mevcut elbiselerin listesini getirir.
-- `POST /dresses`: Envantere yeni bir elbise ekler.
-- `PUT /dresses/{id}`: Mevcut bir elbisenin detaylarını günceller. Kiralama işlemini burada yapıyoruz
+- `GET /dresses`: Gets a list of all available dresses.
+- `POST /dresses`: Adds a new dress to the inventory.
+- `PUT /dresses/{id}`: Updates the details of an existing dress. This is where we perform the rental process.
 
-## Kullanılan Teknolojiler
+## Contributors
 
-- **Java 17:** Backend mantığı için kullanılan ana programlama dili.
-- **Spring Boot:** RESTful servislerin hızlı geliştirilmesi için kullanıldı.
-- **Spring Data JPA:** Veritabanı işlemlerini basitleştiren bir Spring modülü.
-- **Maven:** Proje bağımlılık yönetimi ve derleme işlemleri.
-- **Docker & Docker Compose:** Uygulamayı ve MSSQL veritabanını kapsayıcı olarak çalıştırmak için kullanılır.
-- **MSSQL:** Veritabanı yönetim sistemi olarak kullanılmıştır.
+This project is developed by Java Backend Development Academy.
 
-## Katkıda Bulunanlar
+## License
 
-Bu proje, Java Backend Geliştirme Akademisi tarafından geliştirilmiştir.
-
-## Lisans
-
-Bu proje MIT Lisansı altında lisanslanmıştır. Daha fazla bilgi için `LICENSE` dosyasına bakın.
+This project is licensed under the MIT License. See `LICENSE` file for more information.
