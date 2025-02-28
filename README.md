@@ -71,6 +71,14 @@ To run the project, you must have the following software installed on your syste
    ```bash
    docker-compose up --build
    ```
+## API Test
+
+   **Swagger URL:**
+
+   ```bash
+   http://localhost:8080/swagger-ui/index.html#/v3/api-docs
+   ```
+
 
 ## API Endpoints
 
